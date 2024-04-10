@@ -1,0 +1,86 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import options from "./options";
+
+const {
+  author,
+  copyright,
+  defaultDescription,
+  defaultKeywords,
+  defaultTitle,
+  image,
+} = options;
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+}
+
+const { title, description = defaultDescription, keywords } = Astro.props;
+
+const currentKeywords = keywords
+  ? keywords + ", " + defaultKeywords
+  : defaultKeywords;
+
+const titleName = title + " | " + defaultTitle;
+
+const canonical = import.meta.env.SITE + Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content={author} />
+    <meta name="language" content="ES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" sizes="963x963" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- SEO -->
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="robots" content="index, follow" />
+    <meta name="Classification" content="Business" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={currentKeywords} />
+    <meta name="copyright" content={copyright} />
+    <meta property="og:site_name" content={titleName} />
+
+    <!-- Open Graph / Facebook -->
+    <meta name="og:description" content={description} />
+    <meta name="og:image" content={image} />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content={titleName} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:title" content={titleName} />
+    <meta name="twitter:description" content={description} />
+
+    <ViewTransitions />
+    <title>{titleName}</title>
+  </head>
+
+  <body class="flex flex-col fon">
+    <main class="grow max-w-7xl mx-auto">
+      <slot />
+    </main>
+    <style is:global>
+      :root {
+        scroll-behavior: smooth;
+
+        --primary: #228b22;
+        --secondary-1: #8b225d;
+        --secondary-2: #ae662a;
+      }
+      main {
+        align-content: center;
+      }
+      body {
+        min-height: 100vh;
+      }
+    </style>
+  </body>
+</html>
