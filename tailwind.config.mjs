@@ -7,7 +7,16 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	plugins: [animations],
 	theme: {
+		fontFamily: {
+			title: ["Montserrat Alternates", ...defaultTheme.fontFamily.serif],
+			subtitle: ["Goudy Bookletter 1911", ...defaultTheme.fontFamily.sans],
+			body: ["Kanit", ...defaultTheme.fontFamily.sans],
+		},
 		extend: {
+			spacing: {
+				"80ch": "80ch",
+				"100ch": "100ch",
+			},
 			colors: {
 				primary: { // forest
 					50: "#BDEFBD",
@@ -50,6 +59,5 @@ export default {
 				}
 			}
 		},
-		
 	},
 }

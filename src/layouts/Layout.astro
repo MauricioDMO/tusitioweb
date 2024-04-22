@@ -63,23 +63,40 @@ const canonical = import.meta.env.SITE + Astro.url.pathname;
     <title>{titleName}</title>
   </head>
 
-  <body class="flex flex-col fon">
-    <main class="grow max-w-7xl mx-auto">
+  <body class="font-body">
+    <main class="content-center min-h-screen">
       <slot />
     </main>
     <style is:global>
       :root {
         scroll-behavior: smooth;
-
-        --primary: #228b22;
-        --secondary-1: #8b225d;
-        --secondary-2: #ae662a;
-      }
-      main {
-        align-content: center;
       }
       body {
         min-height: 100vh;
+      }
+      @font-face {
+        font-family: "Montserrat Alternates";
+        font-style: normal;
+        font-weight: 400;
+        src:
+          local("Montserrat Alternates"),
+          url("/fonts/MontserratAlternates-Regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Kanit";
+        font-style: normal;
+        font-weight: 400;
+        src:
+          local("Kanit"),
+          url("/fonts/Kanit-Regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Goudy Bookletter 1911";
+        font-style: normal;
+        font-weight: 400;
+        src:
+          local("Goudy Bookletter 1911"),
+          url("/fonts/GoudyBookletter1911-Regular.woff2") format("woff2");
       }
     </style>
   </body>
