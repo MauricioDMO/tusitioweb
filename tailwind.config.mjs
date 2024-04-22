@@ -9,7 +9,7 @@ export default {
 	theme: {
 		fontFamily: {
 			title: ["Montserrat Alternates", ...defaultTheme.fontFamily.serif],
-			subtitle: ["Goudy Bookletter 1911", ...defaultTheme.fontFamily.sans],
+			subtitle: ["Goudy Bookletter", ...defaultTheme.fontFamily.sans],
 			body: ["Kanit", ...defaultTheme.fontFamily.sans],
 		},
 		extend: {
