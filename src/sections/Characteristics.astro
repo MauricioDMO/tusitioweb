@@ -69,24 +69,131 @@ const CHARACTERISTICS = [
 ];
 ---
 
-<section>
-  <h2 class="text-4xl font-title text-center text-gray-800 my-24">
+<section class="bg-gray-50 p-[0.1px] relative">
+  <h2 class="text-4xl
+  font-title
+  text-center
+  text-gray-800
+  my-24">
     Características de nuestros servicios
   </h2>
-  <ul class="flex flex-col gap-4 px-2">
+  <ul class="flex flex-col gap-4 px-2 relative z-0">
     {
       CHARACTERISTICS.map(({ name, description, icon }, i) => {
         return (
-          <li class="max-w-[60ch] mx-auto flex items-center gap-2">
-            {!(i % 2) && <img src={icon} alt={name} class="size-16" />}
-            <div class="flex my-2 gap-2 flex-col items-start">
-              <h3 class="text-2xl font-subtitle text-gray-800">{name}</h3>
-              <p class="leading-relaxed">{description}</p>
+          <li class="characteristic max-w-[60ch] mx-auto relative">
+            <div class="flex items-center gap-2 z-20 bg-white py-2 px-6 rounded shadow-md">
+              {!(i % 2) && (
+                <img
+                  src={icon}
+                  alt={name}
+                  class="size-16 select-none pointer-events-none"
+                />
+              )}
+
+              <div class="flex my-2 gap-2 flex-col items-start">
+                <h3 class="text-2xl font-subtitle text-gray-800">{name}</h3>
+                <p class="leading-relaxed">{description}</p>
+              </div>
+
+              {!!(i % 2) && (
+                <img
+                  src={icon}
+                  alt={name}
+                  class="size-16 select-none pointer-events-none"
+                />
+              )}
             </div>
-            {!!(i % 2) && <img src={icon} alt={name} class="size-16" />}
+            <div class="border -z-10" />
           </li>
         );
       })
     }
   </ul>
+
+  <script>
+    const characteristics = document.querySelectorAll(".characteristic");
+    characteristics.forEach((characteristic, i) => {
+      let percentage = 0;
+      let leave = false;
+      const duration = 500;
+      const fps = 1000 / 60;
+      const steps = duration / fps;
+
+      const showGradient = async () => {
+        while (percentage < 1 && !leave) {
+          percentage += 1 / steps;
+          if (percentage > 1) percentage = 1;
+
+          let curve = 1 / (1 + Math.pow(10, -5 * (percentage - 0.5)));
+          if (curve > 1) curve = 1;
+
+          const characteristicElement = characteristic as HTMLElement;
+          characteristicElement.style.setProperty(
+            "--gradient",
+            `conic-gradient( #4BD34Bcc , #4BD34B ${100 * curve}%, transparent 0)`
+          );
+          await new Promise((resolve) => setTimeout(resolve, fps));
+        }
+      };
+
+      const hideGradient = async () => {
+        while (percentage > 0 && leave) {
+          percentage -= 1 / steps;
+          if (percentage < 0) percentage = 0;
+
+          let curve = 1 / (1 + Math.exp(-10 * (percentage - 0.5)));
+          if (curve < 0.01) curve = 0;
+
+          const characteristicElement = characteristic as HTMLElement;
+          characteristicElement.style.setProperty(
+            "--gradient",
+            `conic-gradient(#d34b98, #771d50 ${100 * curve}%, transparent 0)`
+          );
+          await new Promise((resolve) => setTimeout(resolve, fps));
+        }
+      };
+
+      characteristic.addEventListener("mouseenter", () => {
+        leave = false;
+        showGradient();
+      });
+
+      characteristic.addEventListener("mouseleave", () => {
+        leave = true;
+        hideGradient();
+      });
+    });
+  </script>
+
+  <style>
+    .border {
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      filter: blur(4px);
+      position: absolute;
+      background: var(--gradient);
+    }
+    li {
+      view-timeline-name: --show;
+      view-timeline-axis: block;
+      animation-timeline: --show;
+      animation-name: show;
+      animation-range: entry 25% cover 40%;
+      animation-fill-mode: both;
+    }
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+        filter: blur(2px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+  </style>
 </section>
