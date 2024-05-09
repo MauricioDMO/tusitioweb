@@ -9,5 +9,9 @@ export default defineConfig({
   site: "https://tusitioweb.design",
   integrations: [tailwind(), sitemap()],
   output: "static",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true
+    }
+  })
 });
