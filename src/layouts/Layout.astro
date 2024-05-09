@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import options from "./options";
+import Header from "@/sections/Header.astro";
+import Footer from "@/sections/Footer.astro";
 
 const {
   author,
@@ -64,9 +66,12 @@ const canonical = import.meta.env.SITE + Astro.url.pathname;
   </head>
 
   <body class="font-body text-pretty relative">
+    <Header />
     <main class="content-center min-h-screen">
       <slot />
     </main>
+    <Footer />
+
     <style is:global>
       :root {
         scroll-behavior: smooth;
