@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Personalización",
+    "description": "Creación de un diseño web que refleje la identidad única de la marca, con una atención meticulosa a los detalles visuales y funcionales que diferencian al sitio de la competencia.",
+    "icon": "./icons/Brush icon.svg"
+  },
+  {
+    "name": "Soporte Técnico y Mantenimiento",
+    "description": "Soporte técnico eficiente con mantenimiento proactivo. Esto garantiza que tu sitio web esté siempre en óptimas condiciones, actualizado con las últimas tecnologías y tendencias, y listo para atender cualquier incidencia.",
+    "icon": "./icons/Settings icon.svg"
+  },
+  {
+    "name": "Estética Moderna",
+    "description": "Incorporar tendencias de diseño web modernas y elementos interactivos que mantengan el sitio actualizado y atractivo para los visitantes.",
+    "icon": "./icons/Sparkles icon.svg"
+  },
+  {
+    "name": "Velocidad",
+    "description": "Optimizar el tiempo de carga del sitio web mediante técnicas avanzadas de compresión de archivos y almacenamiento en caché para garantizar una navegación rápida y eficiente.",
+    "icon": "./icons/Bolt icon.svg"
+  },
+  {
+    "name": "Integración Multimedia",
+    "description": "Enriquece tu sitio web con una variedad de contenido multimedia. Integra imágenes de alta calidad, videos informativos y archivos de audio para ofrecer una experiencia rica y dinámica que capte la atención de tus visitantes.",
+    "icon": "./icons/Movie icon.svg"
+  },
+  {
+    "name": "Integración Social",
+    "description": "Facilitar la conexión y el compartir en redes sociales, ampliando el alcance del contenido y fomentando la interacción con la comunidad.",
+    "icon": "./icons/Users icon.svg"
+  },
+  {
+    "name": "Diseño Responsive",
+    "description": "Se asegura una experiencia de usuario coherente y accesible en todos los dispositivos, adaptando el diseño a diferentes tamaños de pantalla y orientaciones.",
+    "icon": "./icons/Devices icon.svg"
+  },
+  {
+    "name": "SEO",
+    "description": "Mejorar la visibilidad en línea del sitio web a través de la optimización para motores de búsqueda, aumentando así las posibilidades de ser encontrado por los usuarios.",
+    "icon": "./icons/Seo icon.svg"
+  },
+  {
+    "name": "Compatibilidad con Navegadores",
+    "description": "Tu sitio web funcionara sin problemas en los navegadores más usados, como Chrome, Firefox, Safari y Edge. Esto asegura que todos los usuarios disfruten de una experiencia uniforme y de calidad, independientemente del navegador que prefieran.",
+    "icon": "./icons/Browser icon.svg"
+  },
+  {
+    "name": "Accesibilidad Web",
+    "description": "Incorporación de accesibilidad desde el diseño inicial del sitio. Textos alternativos para imágenes, asegura una navegación intuitiva por teclado y considera el uso de lectores de pantalla, para que tu sitio sea accesible a personas con diferentes capacidades.",
+    "icon": "./icons/Accessible icon.svg"
+  },
+  {
+    "name": "Ultima Tecnología",
+    "description": "Lo último en innovaciones tecnológicas en el ámbito del desarrollo web, asegurando que tu sitio web se mantenga líder en funcionalidad y eficiencia.",
+    "icon": "./icons/Chip icon.svg"
+  }
+]
