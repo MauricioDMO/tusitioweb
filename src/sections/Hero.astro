@@ -1,3 +1,7 @@
+---
+import ArrowBadge from "@/components/Icons/ArrowBadge.astro";
+---
+
 <section class="h-screen text-white content-center relative z-0">
   <div
     class="flex flex-col gap-x-4 items-center z-20 -translate-y-2/3 relative"
@@ -22,6 +26,9 @@
     alt="Fondo que contiene una laptop"
     id="lap"
     class="absolute pointer-events-none select-none min-h-[33%] object-cover w-full bottom-0 left-1/2 -translate-x-1/2 animate-fill-mode-both animate-fade-in aspect-[32/9] z-10"
+  />
+  <ArrowBadge
+    class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 size-12 animate-float animate-iteration-count-infinite animate-duration-1000 text-primary-200"
   />
 </section>
 
