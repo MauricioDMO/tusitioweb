@@ -1,0 +1,81 @@
+---
+const BENEFITS = [
+  {
+    title: "Alcance global",
+    description:
+      "Un sitio web te permite alcanzar a personas en todo el mundo. No estás limitado por la ubicación geográfica, lo que amplía tu audiencia potencial y tus oportunidades de negocio.",
+    image: "/images/global.webp",
+    author: "Jon Tyson",
+    autorLink: "https://unsplash.com/es/@jontyson",
+    unsplashLink:
+      "https://unsplash.com/es/fotos/senalizacion-de-neon-para-el-mundo-tangfe8KQdw",
+  },
+  {
+    title: "Disponibilidad 24/7",
+    description:
+      "Tu sitio web está siempre disponible para tus clientes, incluso fuera del horario comercial. Esto permite a los clientes acceder a información, hacer compras o ponerse en contacto contigo en cualquier momento que les resulte conveniente.",
+    image: "/images/availability.webp",
+    author: "Stephen Picilaidis",
+    autorLink: "https://unsplash.com/es/@stephen16",
+    unsplashLink:
+      "https://unsplash.com/es/fotos/senalizacion-de-luz-de-neon-de-amor-purpura-y-blanco-BV49ACKmMtY",
+  },
+  {
+    title: "Credibilidad y profesionalismo",
+    description:
+      "Tener un sitio web bien diseñado y actualizado transmite una imagen de profesionalismo y confianza. Los clientes potenciales tienden a confiar más en las empresas que tienen una presencia en línea sólida.",
+    image: "/images/professional.webp",
+    author: "Jeremy Beadle",
+    autorLink: "https://unsplash.com/es/@jeremybeadle",
+    unsplashLink:
+      "https://unsplash.com/es/fotos/hombre-sosteniendo-su-traje-negro-qnU-UR0o5X8",
+  },
+  {
+    title: "Marketing y promoción",
+    description:
+      "Un sitio web es una poderosa herramienta de marketing. Puedes promocionar tus productos, servicios y ofertas especiales de manera efectiva a través de tu sitio web, utilizando técnicas como el SEO, el marketing de contenido y las redes sociales.",
+    image: "/images/marketing.webp",
+    author: "Andre Benz",
+    authorLink: "https://unsplash.com/es/@trapnation",
+    unsplashLink:
+      "https://unsplash.com/es/fotos/grupo-de-personas-que-caminan-cerca-de-edificios-de-gran-altura-LEikIOMSxfs",
+  },
+];
+---
+
+<section>
+  <ul class="flex flex-col gap-4">
+    {
+      BENEFITS.map(
+        ({ image, description, title, unsplashLink, author, authorLink }) => (
+          <li>
+            <article class="grid sm:grid-cols-2 relative max-w-80ch m-auto place-items-center">
+              <div class="relative">
+                <img
+                  src={image}
+                  alt={title}
+                  loading="lazy"
+                  class="w-64 shadow-md"
+                />
+                <span class="absolute bottom-2 right-2 text-white/70 font-subtitle text-xs ">
+                  Foto de
+                  <a href={authorLink} target="_blank" class="underline">
+                    {author}
+                  </a>
+                  en
+                  <a href={unsplashLink} target="_blank" class="underline">
+                    Unsplash
+                  </a>
+                </span>
+              </div>
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+            </article>
+          </li>
+        )
+      )
+    }
+  </ul>
+</section>
