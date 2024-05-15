@@ -5,7 +5,7 @@ import BENEFITS from "@/jsons/benefits.json";
 
 <section class="border-t border-t-white/15">
   <Subtitle>Beneficios de crear tu web</Subtitle>
-  <ul class="flex flex-col gap-8">
+  <ul class="flex flex-col gap-24 sm:gap-8">
     {
       BENEFITS.map(
         ({ image, description, title, unsplashLink, author, authorLink }) => (
@@ -30,7 +30,7 @@ import BENEFITS from "@/jsons/benefits.json";
                 </span>
               </div>
               <div class="content">
-                <h3 class="font-subtitle text-2xl font-bold text-primary-400 my-8 sm:mt-0 sm:text-left text-center">
+                <h3 class="font-subtitle text-2xl font-bold text-primary-400 my-4 sm:mt-0 sm:text-left text-center">
                   {title}
                 </h3>
                 <p class="sm:text-left text-center">{description}</p>
