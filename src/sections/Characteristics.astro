@@ -1,16 +1,11 @@
 ---
+import Subtitle from "@/components/Subtitle.astro";
 import CHARACTERISTICS from "@/jsons/characteristics.json";
 ---
 
-<section class="bg-gray-50 p-[0.1px] relative">
-  <h2 class="text-4xl
-  font-title
-  text-center
-  text-gray-800
-  my-24">
-    Características de nuestros servicios
-  </h2>
-  <ul class="flex flex-col gap-4 px-2 relative z-0 my-24">
+<section class="p-[0.1px] relative">
+  <Subtitle> Características de nuestros servicios </Subtitle>
+  <ul class="flex flex-col gap-16 px-8 relative z-0 my-24">
     {
       CHARACTERISTICS.map(({ name, description, icon }, i) => {
         const odd = i % 2 === 1;
@@ -18,7 +13,7 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
         return (
           <li class="characteristic max-w-[60ch] mx-auto relative">
             <div
-              class={`flex items-center gap-4 z-20 bg-white py-2 px-6 rounded shadow-md ${odd ? "flex-row-reverse" : ""}`}
+              class={`flex items-center gap-4 z-20 bg-slate-950/95 py-2 px-6 rounded hover:scale-105 transition-transform peer ${odd ? "flex-row-reverse" : ""}`}
             >
               <img
                 src={icon}
@@ -30,7 +25,7 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
                 <p class="leading-relaxed">{description}</p>
               </div>
             </div>
-            <div class="border -z-10" />
+            <div class="background__border -z-10 peer-hover:scale-105 transition-transform" />
           </li>
         );
       })
@@ -93,7 +88,7 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
   </script>
 
   <style>
-    .border {
+    .background__border {
       width: 100%;
       height: 100%;
       inset: 0;
