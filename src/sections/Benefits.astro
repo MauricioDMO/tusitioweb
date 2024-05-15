@@ -30,10 +30,10 @@ import BENEFITS from "@/jsons/benefits.json";
                 </span>
               </div>
               <div class="content">
-                <h3 class="font-subtitle text-2xl font-bold text-primary-400 mb-8">
+                <h3 class="font-subtitle text-2xl font-bold text-primary-400 my-8 sm:mt-0 sm:text-left text-center">
                   {title}
                 </h3>
-                <p>{description}</p>
+                <p class="sm:text-left text-center">{description}</p>
               </div>
             </article>
           </li>
@@ -51,6 +51,24 @@ import BENEFITS from "@/jsons/benefits.json";
     animation-name: show;
     animation-range: entry 25% cover 30%;
     animation-fill-mode: both;
+  }
+
+  img {
+    aspect-ratio: 2 / 3;
+    view-timeline-name: --show;
+    view-timeline-axis: block;
+    animation-timeline: --show;
+    animation-name: colorize;
+    animation-range: entry 25% cover 80%;
+    animation-fill-mode: both;
+  }
+  @keyframes colorize {
+    from {
+      filter: grayscale(100%);
+    }
+    to {
+      filter: grayscale(0%);
+    }
   }
   @keyframes show {
     from {
