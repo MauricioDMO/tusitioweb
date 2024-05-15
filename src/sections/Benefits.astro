@@ -1,8 +1,10 @@
 ---
+import Subtitle from "@/components/Subtitle.astro";
 import BENEFITS from "@/jsons/benefits.json";
 ---
 
 <section>
+  <Subtitle>Beneficios de crear tu web</Subtitle>
   <ul class="flex flex-col gap-4">
     {
       BENEFITS.map(
@@ -14,7 +16,7 @@ import BENEFITS from "@/jsons/benefits.json";
                   src={image}
                   alt={title}
                   loading="lazy"
-                  class="w-64 shadow-md"
+                  class="w-64 shadow-md shadow-white/10 rounded"
                 />
                 <span class="absolute bottom-2 right-2 text-white/70 font-subtitle text-xs ">
                   Foto de
@@ -27,8 +29,10 @@ import BENEFITS from "@/jsons/benefits.json";
                   </a>
                 </span>
               </div>
-              <div>
-                <h3>{title}</h3>
+              <div class="content">
+                <h3 class="font-subtitle text-2xl font-bold text-primary-400 mb-8">
+                  {title}
+                </h3>
                 <p>{description}</p>
               </div>
             </article>
@@ -38,3 +42,24 @@ import BENEFITS from "@/jsons/benefits.json";
     }
   </ul>
 </section>
+
+<style>
+  .content {
+    view-timeline-name: --show;
+    view-timeline-axis: block;
+    animation-timeline: --show;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translateY(80px) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>
