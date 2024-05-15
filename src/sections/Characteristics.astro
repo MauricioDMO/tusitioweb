@@ -21,7 +21,9 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
                 class="size-16 select-none pointer-events-none"
               />
               <div class="flex my-2 gap-2 flex-col items-start text-center">
-                <h3 class="text-2xl font-subtitle w-full">{name}</h3>
+                <h3 class="text-2xl font-subtitle w-full text-primary-400">
+                  {name}
+                </h3>
                 <p class="leading-relaxed">{description}</p>
               </div>
             </div>
@@ -95,12 +97,6 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
       filter: blur(4px);
       position: absolute;
       background: var(--gradient);
-    }
-    h3 {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 2px;
-      text-decoration-color: var(--secondary-1);
     }
     li {
       view-timeline-name: --show;
