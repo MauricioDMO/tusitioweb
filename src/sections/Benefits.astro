@@ -7,38 +7,26 @@ import BENEFITS from "@/jsons/benefits.json";
   <Subtitle>Beneficios de crear tu web</Subtitle>
   <ul class="flex flex-col gap-24 sm:gap-8">
     {
-      BENEFITS.map(
-        ({ image, description, title, unsplashLink, author, authorLink }) => (
-          <li>
-            <article class="grid sm:grid-cols-2 relative max-w-80ch m-auto place-items-center px-8">
-              <div class="relative">
-                <img
-                  src={image}
-                  alt={title}
-                  loading="lazy"
-                  class="w-64 shadow-md shadow-white/10 rounded"
-                />
-                <span class="absolute bottom-2 right-2 text-white/70 font-subtitle text-xs ">
-                  Foto de
-                  <a href={authorLink} target="_blank" class="underline">
-                    {author}
-                  </a>
-                  en
-                  <a href={unsplashLink} target="_blank" class="underline">
-                    Unsplash
-                  </a>
-                </span>
-              </div>
-              <div class="content">
-                <h3 class="font-subtitle text-2xl font-bold text-primary-400 my-4 sm:mt-0 sm:text-left text-center">
-                  {title}
-                </h3>
-                <p class="sm:text-left text-center">{description}</p>
-              </div>
-            </article>
-          </li>
-        )
-      )
+      BENEFITS.map(({ image, description, title }) => (
+        <li>
+          <article class="grid sm:grid-cols-2 relative max-w-80ch m-auto place-items-center px-8">
+            <div class="relative">
+              <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                class="w-64 shadow-md shadow-white/10 rounded"
+              />
+            </div>
+            <div class="content">
+              <h3 class="font-subtitle text-2xl font-bold text-primary-400 my-4 sm:mt-0 sm:text-left text-center">
+                {title}
+              </h3>
+              <p class="sm:text-left text-center">{description}</p>
+            </div>
+          </article>
+        </li>
+      ))
     }
   </ul>
 </section>
@@ -49,7 +37,7 @@ import BENEFITS from "@/jsons/benefits.json";
     view-timeline-axis: block;
     animation-timeline: --show;
     animation-name: show;
-    animation-range: entry 25% cover 30%;
+    animation-range: entry 100% cover 30%;
     animation-fill-mode: both;
   }
 
@@ -64,10 +52,10 @@ import BENEFITS from "@/jsons/benefits.json";
   }
   @keyframes colorize {
     from {
-      filter: grayscale(100%);
+      filter: contrast(0.7) grayscale(1);
     }
     to {
-      filter: grayscale(0%);
+      filter: contrast(1.05) grayscale(0);
     }
   }
   @keyframes show {
