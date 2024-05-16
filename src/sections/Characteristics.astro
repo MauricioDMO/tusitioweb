@@ -4,9 +4,9 @@ import Subtitle from "@/components/Subtitle.astro";
 import CHARACTERISTICS from "@/jsons/characteristics.json";
 ---
 
-<Section shadowColor="#777799" position="center">
+<Section shadowColor="#777799" position="right">
   <Subtitle> Características de nuestros servicios </Subtitle>
-  <ul class="flex flex-col gap-16 px-8 relative z-0 my-24">
+  <ul class="flex flex-col gap-16 px-8 relative z-0">
     {
       CHARACTERISTICS.map(({ name, description, icon }, i) => {
         const odd = i % 2 === 1;
