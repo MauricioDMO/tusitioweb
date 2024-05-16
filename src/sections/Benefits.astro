@@ -1,9 +1,10 @@
 ---
+import Section from "@/components/Section.astro";
 import Subtitle from "@/components/Subtitle.astro";
 import BENEFITS from "@/jsons/benefits.json";
 ---
 
-<section class="border-t border-t-white/15">
+<Section shadowColor="#777799" position="left">
   <Subtitle>Beneficios de crear tu web</Subtitle>
   <ul class="flex flex-col gap-24 sm:gap-8">
     {
@@ -29,7 +30,7 @@ import BENEFITS from "@/jsons/benefits.json";
       ))
     }
   </ul>
-</section>
+</Section>
 
 <style>
   .content {

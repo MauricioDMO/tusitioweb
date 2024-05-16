@@ -1,9 +1,10 @@
 ---
+import Section from "@/components/Section.astro";
 import Subtitle from "@/components/Subtitle.astro";
 import CHARACTERISTICS from "@/jsons/characteristics.json";
 ---
 
-<section class="p-[0.1px] relative">
+<Section shadowColor="#777799" position="center">
   <Subtitle> Características de nuestros servicios </Subtitle>
   <ul class="flex flex-col gap-16 px-8 relative z-0 my-24">
     {
@@ -119,4 +120,4 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
       }
     }
   </style>
-</section>
+</Section>
