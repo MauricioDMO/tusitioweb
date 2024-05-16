@@ -1,0 +1,22 @@
+---
+import Section from "@/components/Section.astro";
+import Subtitle from "@/components/Subtitle.astro";
+import steps from "@/jsons/process.json";
+---
+
+<Section shadowColor="#777799" position="right">
+  <Subtitle> ¿Cuales son los pasos para crear tu web? </Subtitle>
+  <ol class="max-w-80ch mx-auto">
+    {
+      steps.map(({ name, description }, index) => (
+        <li class="flex items-center gap-4 p-4 border-b border-gray-200">
+          <span class="text-2xl font-bold text-primary-400">{index + 1}</span>
+          <article class="flex flex-col gap-2">
+            <h3 class="text-xl font-subtitle text-primary-400">{name}</h3>
+            <p>{description}</p>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

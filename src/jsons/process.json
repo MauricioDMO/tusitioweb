@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Consulta inicial",
+    "description": "Nos reunimos con el cliente para discutir sus necesidades y objetivos, y para obtener una comprensión clara de lo que están buscando en su sitio web."
+  },
+  {
+    "name": "Diseño y desarrollo",
+    "description": "Creamos un diseño personalizado basado en las especificaciones del cliente y lo desarrollamos utilizando las últimas tecnologías y tendencias de diseño."
+  },
+  {
+    "name": "Revisión y ajustes",
+    "description": "Presentamos el diseño al cliente para su revisión y realizamos cualquier ajuste necesario para garantizar que estén satisfechos con el resultado final."
+  },
+  {
+    "name": "Entrega y soporte",
+    "description": "Una vez que el sitio web esté completo y aprobado por el cliente, lo entregamos y proporcionamos soporte continuo para cualquier pregunta o problema que puedan surgir."
+  }
+]
