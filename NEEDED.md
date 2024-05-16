@@ -13,7 +13,7 @@ Body:
 
 # Sections
 
-- [ ] Información sobre el servicio
+- [x] Información sobre el servicio
 - [x] Características
 - [x] Beneficios
 - [ ] Proceso de trabajo
@@ -31,11 +31,11 @@ Body:
 
 2. Portafolio de trabajos anteriores:
    - Muestra ejemplos de sitios web que has creado anteriormente para que los visitantes puedan ver tu trabajo y evaluar tu estilo y calidad.
-     - [Native Wine](https://native-wine.vercel.app): Esta pagina web fue creada con el fin de promocionar un vino artesanal de El Salvador, se utilizo un diseño minimalista y elegante para resaltar la calidad del producto.
-      Tecnologías utilizadas: Astro, Tailwind CSS
      - [Construfijaciones](https://construfijaciones.com): Sitio web de una empresa de reparación y mantenimiento de herramienta eléctrica DeWalt, Black & Decker, Stanley y Craftsman. Se utilizo un diseño limpio y profesional para reflejar la seriedad y confiabilidad de la empresa.
       Tecnologías utilizadas: Astro, React, Tailwind CSS
       Comentarios: Roberto Flores, dueño y fundador de Construfijaciones
+     - [Native Wine](https://native-wine.vercel.app): Esta pagina web fue creada con el fin de promocionar un vino artesanal de El Salvador, se utilizo un diseño minimalista y elegante para resaltar la calidad del producto.
+      Tecnologías utilizadas: Astro, Tailwind CSS
      - Ejemplo de como integrarlos:
       ![Ejemplo de como integrarlos](image.png)
 
