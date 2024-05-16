@@ -16,7 +16,7 @@ Body:
 - [x] Información sobre el servicio
 - [x] Características
 - [x] Beneficios
-- [ ] Proceso de trabajo
+- [x] Proceso de trabajo
 - [ ] Trabajos
 - [ ] Precios
 - [ ] Contacto
