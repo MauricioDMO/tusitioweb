@@ -1,0 +1,32 @@
+---
+interface Props {
+  shadowColor: string;
+  class?: string;
+  position: "left" | "right" | "center";
+}
+
+const props: Props = Astro.props;
+const { shadowColor, position }: Props = props;
+---
+
+<section
+  class={"border-t border-t-white/15 relative z-auto" +
+    (props.class ? ` ${props.class}` : "")}
+>
+  <div
+    class="section-shadow absolute top-0 left-0 w-full h-screen -z-10"
+    style={`--shadow-color: ${shadowColor}33; --position: ${position};`}
+  >
+  </div>
+  <slot />
+</section>
+
+<style>
+  .section-shadow {
+    background-image: radial-gradient(
+      ellipse 70% 70% at var(--position) -30%,
+      var(--shadow-color),
+      transparent
+    );
+  }
+</style>
