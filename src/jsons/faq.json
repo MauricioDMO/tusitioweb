@@ -1,0 +1,26 @@
+[
+  {
+    "question": "¿Cuánto tiempo se tarda en crear un sitio web?",
+    "answer": "El tiempo de creación de un sitio web varía según la complejidad del proyecto y la cantidad de páginas y características que se requieran. En general, un sitio web básico puede tardar de 3 a 6 semanas en completarse, mientras que un sitio web más complejo puede tardar de 6 a 12 semanas. Esto después de brindada toda la información necesaria."
+  },
+  {
+    "question": "¿Qué información necesitas de mí para crear mi sitio web?",
+    "answer": "Necesitamos información detallada sobre su empresa, incluyendo su logotipo, colores corporativos, imágenes y texto que desea incluir en el sitio web. También necesitamos una descripción clara de sus objetivos y necesidades para el sitio web."
+  },
+  {
+    "question": "¿Ofrecen servicios de mantenimiento y soporte?",
+    "answer": "Sí, ofrecemos servicios de mantenimiento y soporte para todos los sitios web que creamos. Nuestros planes de mantenimiento incluyen actualizaciones regulares, copias de seguridad, soporte técnico y asistencia con cualquier problema que pueda surgir."
+  },
+  {
+    "question": "¿Puedo actualizar mi sitio web yo mismo?",
+    "answer": "No, por el momento no ofrecemos la opción de que los clientes actualicen sus sitios web por sí mismos. Sin embargo, estamos disponibles para realizar cualquier actualización o cambio que necesite en su sitio web. Esto si son pequeños cambios, si son cambios grandes se cobrará un costo adicional."
+  },
+  {
+    "question": "¿El precio de mi sitio web incluye el alojamiento y el dominio?",
+    "answer": "El precio de su sitio web incluye el alojamiento, pero no el costo del dominio. Si no tiene un dominio, podemos ayudarlo seleccionar uno y registrarlo por el costo del mismo."
+  },
+  {
+    "question": "¿Qué tecnologías utilizan para crear sitios web?",
+    "answer": "Utilizamos una variedad de tecnologías y herramientas para crear sitios web, incluyendo HTML, CSS, JavaScript, React, Astro, Tailwind CSS, entre otras. Seleccionamos las tecnologías más adecuadas para cada proyecto en función de las necesidades y objetivos del cliente."
+  }
+]

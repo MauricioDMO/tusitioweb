@@ -1,0 +1,21 @@
+---
+import Question from "@/components/Question.astro";
+import Section from "@/components/Section.astro";
+import Subtitle from "@/components/Subtitle.astro";
+import faq from "@/jsons/faq.json";
+---
+
+<Section shadowColor="#777799" position="left">
+  <Subtitle> Preguntas frecuentes </Subtitle>
+  <ul class="max-w-80ch mx-auto flex flex-col">
+    {
+      faq.map(({ question, answer }, i) => (
+        <li class="max-w-80ch border border-gray-200 first:rounded-t last:rounded-b">
+          <Question question={question}>
+            <p class="m-4 text-white/80">{answer}</p>
+          </Question>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
