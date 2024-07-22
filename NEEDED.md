@@ -19,6 +19,7 @@ Body:
 - [x] Proceso de trabajo
 - [ ] Trabajos
 - [ ] Precios
+- [x] Preguntas frecuentes
 - [ ] Contacto
 
 ---
@@ -26,7 +27,7 @@ Body:
    - Descripción detallada de los servicios que ofreces, incluyendo el proceso de creación de páginas web, los tipos de sitios web que puedes construir, y cualquier tecnología o plataforma específica que utilices.
     - Ofrecemos servicios de diseño atractivo y desarrollo de sitios web totalmente personalizados para pequeñas empresas y emprendedores.
       Utilizamos las últimas tecnologías y tendencias de diseño para crear sitios web atractivos y funcionales que ayuden a nuestros clientes a alcanzar sus objetivos en línea.
-    - Descipción de una imagen: 
+    - Descripción de una imagen: 
       - Una imagen de un diseñador trabajando en una computadora portátil, creando un diseño web moderno y atractivo.
 
 2. Portafolio de trabajos anteriores:
@@ -65,6 +66,9 @@ Body:
       - Integración con redes sociales
       - SEO básico
       - Hosting y dominio
+    No incluyen:
+      - Precio de dominio
+      - Servicios de marketing digital
 
 6. Formulario de contacto:
    - Incluye un formulario de contacto para que los visitantes puedan comunicarse contigo directamente para hacer consultas o solicitar cotizaciones.
