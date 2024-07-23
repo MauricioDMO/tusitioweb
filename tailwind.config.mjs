@@ -9,8 +9,7 @@ export default {
 	theme: {
 		fontFamily: {
 			title: ["Montserrat Alternates", ...defaultTheme.fontFamily.serif],
-			subtitle: ["Goudy Bookletter", ...defaultTheme.fontFamily.sans],
-			body: ["Kanit", ...defaultTheme.fontFamily.sans],
+			body: ["Montserrat", ...defaultTheme.fontFamily.sans],
 		},
 		extend: {
 			spacing: {
