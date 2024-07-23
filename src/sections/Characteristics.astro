@@ -8,7 +8,7 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
   <Subtitle> Características de nuestros servicios </Subtitle>
   <ul class="flex flex-col gap-16 px-8 relative z-0">
     {
-      CHARACTERISTICS.map(({ name, description, icon }, i) => {
+      CHARACTERISTICS.slice(0, 3).map(({ name, description, icon }, i) => {
         const odd = i % 2 === 1;
 
         return (
@@ -22,7 +22,7 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
                 class="size-16 select-none pointer-events-none"
               />
               <div class="flex my-2 gap-2 flex-col items-start text-center">
-                <h3 class="text-2xl font-subtitle w-full text-primary-400">
+                <h3 class="text-2xl -skew-x-12 w-full text-primary-400">
                   {name}
                 </h3>
                 <p class="leading-relaxed">{description}</p>
@@ -34,6 +34,13 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
       })
     }
   </ul>
+
+  <a
+    href="#"
+    class="font-title text-center mx-auto block text-nowrap w-min mt-16 underline px-4 py-2 rounded relative z-0"
+  >
+    Ver más...
+  </a>
 
   <script>
     const characteristics = document.querySelectorAll(".characteristic");
@@ -118,6 +125,13 @@ import CHARACTERISTICS from "@/jsons/characteristics.json";
         transform: translateY(0) scale(1);
         filter: blur(0);
       }
+    }
+    a::before {
+      @apply absolute inset-0 z-10 bg-white/10 rounded pointer-events-none scale-x-0 transition duration-500 origin-left;
+      content: "";
+    }
+    a:hover::before {
+      @apply scale-x-100;
     }
   </style>
 </Section>
