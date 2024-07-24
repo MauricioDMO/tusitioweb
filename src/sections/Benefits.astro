@@ -16,7 +16,13 @@ import BENEFITS from "@/jsons/benefits.json";
                 src={image}
                 alt={title}
                 loading="lazy"
-                class="w-64 shadow-md shadow-white/10 rounded"
+                class="w-64 rounded z-0 effect peer"
+              />
+              <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                class="w-64 rounded absolute top-0 peer-hover:blur-lg -z-10 transition"
               />
             </div>
             <div class="content">
@@ -38,11 +44,11 @@ import BENEFITS from "@/jsons/benefits.json";
     view-timeline-axis: block;
     animation-timeline: --show;
     animation-name: show;
-    animation-range: entry 100% cover 30%;
+    animation-range: entry 0% cover 40%;
     animation-fill-mode: both;
   }
 
-  img {
+  .effect {
     aspect-ratio: 2 / 3;
     view-timeline-name: --show;
     view-timeline-axis: block;
