@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import CHARACTERISTICS from "@/jsons/characteristics.json";
+import Section from "@/components/Section.astro";
+import Subtitle from "@/components/Subtitle.astro";
+---
+
+<Layout
+  title="Características"
+  description="Conoce las características de nuestro servicio"
+>
+  <Section position="center" shadowColor="#fafafa">
+    <Subtitle>Características de nuestros servicios</Subtitle>
+    <ul class="flex flex-col gap-16 mt-8 max-w-80ch mx-auto">
+      {
+        CHARACTERISTICS.map(({ name, description, icon }, i) => (
+          <li class="grid grid-cols-4 gap-4 place-items-center">
+            <img
+              transition:name={name}
+              src={icon}
+              alt={name}
+              class="w-16 h-16"
+            />
+            <div class="max-w-80ch mx-auto flex flex-col items-center gap-4 col-span-3">
+              <h2 class="text-2xl underline underline-offset-4 -skew-x-12 font-title text-balance">
+                {name}
+              </h2>
+              <p class="text-white/60 text-center">{description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+</Layout>
